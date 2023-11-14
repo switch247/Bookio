@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --highligh-hash:#F1592B ;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+input{
+  background: rgb(var(--background-start-rgb));
+  height: 50px;
+}
+select{
+  height: 50px;
+  background: rgb(var(--background-start-rgb));
+}
+
+
+@media only screen and (min-width: 768px) {
+  .nav-links {
+    display: "block";
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: "none";
+  }
+
+  .nav-links ul li:hover a {
+
+    color: #F1592B;
+  }
+}
+
+.search-bar {
+  max-width: 600px;
+}

@@ -1,0 +1,31 @@
+version: '3.9'
+services:
+  db:
+    container_name: pg_container_book
+    image: postgres
+    restart: always
+    ports:
+    - "3443:3432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: book
+  test-db:
+    container_name: pg_container_book_test
+    image: postgres
+    restart: always
+    ports:
+    - "3445:3432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: book
+  # pgadmin:
+  #   container_name: pgadmin_container_book
+  #   image: dpage/pgadmin4
+  #   restart: always
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
+  #     PGADMIN_DEFAULT_PASSWORD: root
+  #   ports:
+  #     - '5050:80'
