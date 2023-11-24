@@ -9,7 +9,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 export default async function Wish() {
-
+  const  session  = await getServerSession(authOptions);
+  if(!session){redirect("/auth/signin")}
   const data = await getAllFavorites().catch(e => { throw e })
   // console.log(data)
   function sp(s: any) {

@@ -37,6 +37,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
-![Screenshot 3](screenshots/screenshot3.png)
+![Screenshot 1](screenshots/bookio.png)
+![Screenshot 2](screenshots/bookio1.png)
+![Screenshot 3](screenshots/bookio2.png)
+![Screenshot 3](screenshots/bookio3.png)
+![Screenshot 3](screenshots/bookio4.png)
+![Screenshot 3](screenshots/bookio5.png)
+![Screenshot 3](screenshots/bookio6.png)
+![Screenshot 3](screenshots/bookio7.png)
