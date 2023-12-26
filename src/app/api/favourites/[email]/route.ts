@@ -4,7 +4,7 @@ import prisma from "@/lib/prismadb";
 import { authMiddleware } from '@/middleware';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: Request, res: NextApiResponse) {
     const email = req.url.slice(req.url.lastIndexOf('/') + 1)
     console.log(email)
     try {
