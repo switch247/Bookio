@@ -9,8 +9,8 @@ export async function apiAuth(req, res, next) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
 
-    const token = session.accessToken;
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    const token = session?.accessToken;
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRETE);
 
     // Perform additional checks if needed
     // For example, check user roles or permissions
