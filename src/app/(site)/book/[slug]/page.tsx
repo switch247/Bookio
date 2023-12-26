@@ -32,7 +32,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                                 key={index}
                                 src={imageLink}
                                 srcSet={`${imageLink} ${size}`}
-                                alt={book.volumeInfo.title}
+                                alt={book?.volumeInfo.title}
                                 className="w-48 h-auto "
                             />
                         ))}
