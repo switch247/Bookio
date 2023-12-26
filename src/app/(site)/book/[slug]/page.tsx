@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import { Fetch } from '@/lib/fetch'
 import { useEffect, useState } from 'react';
@@ -27,12 +28,15 @@ export default function Page({ params }: { params: { slug: string } }) {
                         <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} className="w-48 h-auto" />
                     </div> */}
                     <div className="flex justify-center max-w-ful flex-wrap gap-4">
+            
                         {book.volumeInfo.imageLinks && Object.entries(book.volumeInfo.imageLinks).map(([size, imageLink], index) => (
                             <img
                                 key={index}
-                                src={imageLink}
+
+                                src={imageLink as string}
+
                                 srcSet={`${imageLink} ${size}`}
-                                alt={book?.volumeInfo.title}
+                                alt={book?.volumeInfo?.title}
                                 className="w-48 h-auto "
                             />
                         ))}
