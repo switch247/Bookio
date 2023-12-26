@@ -123,13 +123,13 @@ export const authOptions: NextAuthOptions = {
       }
       return token;
     },
-    async signIn(user, account, profile) {
-      console.log("user", user)
-      console.log("account", account)
-      return true
-      // Customize the redirect URL after signing in with GitHub
-      // return new URL('/profile'); // Replace '/' with your desired redirect URL
-    },
+    // async signIn(user, account, profile) {
+    //   console.log("user", user)
+    //   console.log("account", account)
+    //   return true
+    //   // Customize the redirect URL after signing in with GitHub
+    //   // return new URL('/profile'); // Replace '/' with your desired redirect URL
+    // },
   
   },
   secret: process.env.NEXTAUTH_SECRET,
