@@ -3,7 +3,7 @@ import { Fetch } from '@/lib/fetch'
 import { useEffect, useState } from 'react';
 import { Loading } from "@/components/Loading";
 export default function Page({ params }: { params: { slug: string } }) {
-    const [book, setData] = useState('');
+    const [book, setData] = useState<any>(null);
     const [loading, setLoading] = useState<boolean>(true);
     useEffect(() => {
         const get = async () => {
