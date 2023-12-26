@@ -7,7 +7,7 @@ export function FavCard({ product, sp }: any) {
     return (
         <div key={product.id} className="group relative">
             <div className="flex items-end justify-end hover:bg-blue-500  ">
-                <Heart color="#fa3e5f" link={product.link} />
+                <Heart color="#fa3e5f" link={product.link} title={undefined} authors={undefined} imageLinks={undefined} />
             </div>
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 {(product?.imageLinks) ?

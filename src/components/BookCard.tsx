@@ -18,13 +18,14 @@ export function BookCard({ product, sp }: any) {
             if (!session) {
                 redirect('/api/auth/signin?callbackUrl=/server')
             }
-            const email = session?.user.email;
+            const email = session?.user?.email || '';
             // console.log(email)
             const isFavorite = await checkFavourites(product.selfLink, email);
             setHeartColor (isFavorite);
             // console.log(isFavorite);
         } catch (error) {
-            toast.error(error.toString())
+            toast.error("failed")
+            // error.toString()
         }
     }
    

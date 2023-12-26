@@ -5,7 +5,7 @@ import OwlCarousel from 'react-owl-carousel';
 import React, { useEffect, useRef } from 'react';
 export function Testimony() {
     const contRef = useRef<HTMLDivElement>(null);
-    const scroll = (e) => {
+    const scroll = (e: string) => {
         if (contRef.current) {
             e === 'l' ?
                 contRef.current.scrollBy(-300, 0)
